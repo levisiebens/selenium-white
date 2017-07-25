@@ -73,11 +73,6 @@
     <Compile Include="WebResponse.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="makecert.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
