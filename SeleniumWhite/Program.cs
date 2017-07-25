@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SeleniumWhiteLibrary;
+using WhiteSeleniumServer;
 
 namespace SeleniumWhite
 {
@@ -10,6 +7,10 @@ namespace SeleniumWhite
     {
         static void Main(string[] args)
         {
+            var BrowserState = new AutomatedWebBrowser();
+            var server = new MiniHttpServer(SeleniumWhiteSettings.Default.Port);
+            var handlers = new RequestHandlers(BrowserState);
+            server.RegisterHandlers(handlers);
         }
     }
 }
